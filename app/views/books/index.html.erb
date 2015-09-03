@@ -1,7 +1,9 @@
 <div class="col-12">
-  <h1>Our Books</h1>
+  <h1>Our Book Collection</h1>
 
   <div class="well">
-    <%= @books.inspect %>
+    <% @books.each do |book| %>
+      <ul><%= book.title %></ul>
+    <% end %>
   </div>
 </div>
