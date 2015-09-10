@@ -3,7 +3,9 @@
 
   <div class="well">
     <% @books.each do |book| %>
-      <ul><%= book.title %></ul>
+      <ul>
+        <li><%= book.title %></li>
+      </ul>
     <% end %>
   </div>
 </>
