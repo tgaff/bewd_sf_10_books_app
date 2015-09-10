@@ -25,7 +25,7 @@ class BooksController < ApplicationController
   end
 
   def edit
-
+    @book = get_book
   end
 
   def update
