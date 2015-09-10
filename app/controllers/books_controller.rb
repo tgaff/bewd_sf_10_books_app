@@ -7,7 +7,7 @@ class BooksController < ApplicationController
   end
 
   def show
-    @book = Book.find(params[:id])
+    @book = get_book
   end
 
   def new
@@ -50,4 +50,7 @@ class BooksController < ApplicationController
                                 )
   end
 
+  def get_book
+    Book.find(params[:id])
+  end
 end
