@@ -28,8 +28,16 @@ class BooksController < ApplicationController
 
   private
 
+  # we do this for security - don't let anyone just change anything
+  #   only allow specific changes
   def book_params
-
+    params.require(:book).permit(:title,
+                                 :year_published,
+                                 :author,
+                                 :available,
+                                 :genre,
+                                 :image_url
+                                )
   end
 
 end
